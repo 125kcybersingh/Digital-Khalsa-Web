@@ -1,3 +1,6 @@
+import EmotionGurbaniFinder from '@/components/EmotionGurbaniFinder';
+import WaitlistForm from '@/components/WaitlistForm';
+
 export default function HomePage() {
   return (
     <main className="min-h-screen">
@@ -17,16 +20,16 @@ export default function HomePage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="#beta-signup"
+                href="#waitlist"
                 className="bg-white text-[#000080] px-8 py-4 rounded-lg font-semibold hover:bg-gray-50 transition text-center"
               >
-                Join the Beta (Jan 5 Launch)
+                Join the Waitlist (Jan 5 Launch)
               </a>
               <a
                 href="#features"
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-[#000080] transition text-center"
               >
-                Learn More
+                Try It Now
               </a>
             </div>
           </div>
@@ -88,24 +91,39 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Beta Signup Section */}
-      <section id="beta-signup" className="py-20 bg-gradient-to-br from-[#000080] to-[#FF9933]">
-        <div className="container mx-auto px-6 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Join the Beta (Launching Jan 5)
-          </h2>
-          <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-            50 spots for early testers. Help me make this better. Give feedback. Find bugs.
-            Your input shapes what this becomes.
-          </p>
-          <a
-            href="mailto:vikas@digitalkhalsa.com?subject=Beta Access Request"
-            className="inline-block bg-white text-[#000080] px-8 py-4 rounded-lg font-semibold hover:bg-gray-50 transition"
-          >
-            Request Beta Access
-          </a>
+      {/* Try It Now - Emotion-Based Gurbani Finder */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold text-[#000080] mb-4">
+              Try It Now
+            </h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Experience how Gurbani speaks to your heart. Select how you're feeling, and discover shabads that resonate.
+            </p>
+          </div>
+          <EmotionGurbaniFinder />
         </div>
       </section>
+
+      {/* Waitlist Signup Section */}
+      <section id="waitlist" className="py-20 bg-gradient-to-br from-[#000080] to-[#FF9933]">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+              Join the Waitlist
+            </h2>
+            <p className="text-xl text-white/90 mb-2 max-w-2xl mx-auto">
+              50 spots for beta testers. Launching January 5, 2026.
+            </p>
+            <p className="text-lg text-white/80 max-w-xl mx-auto">
+              Help shape this tool. Give feedback. Find bugs. Your input matters.
+            </p>
+          </div>
+          <WaitlistForm />
+        </div>
+      </section>
+
 
       {/* Footer */}
       <footer className="bg-[#000080] text-white py-12">
