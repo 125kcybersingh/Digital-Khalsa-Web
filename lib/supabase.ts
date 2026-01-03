@@ -43,3 +43,36 @@ export type ShabadWithLines = Shabad & {
   lines: Line[];
   emotion_tags: EmotionTag[];
 };
+
+// Transparency Page Types
+export type ChangelogEntry = {
+  id: string;
+  created_at: string;
+  title: string;
+  description: string;
+  status: 'in-progress' | 'completed' | 'planned';
+  category: 'feature' | 'bug-fix' | 'improvement' | 'update';
+  share_count: number;
+  is_pinned: boolean;
+};
+
+export type TimesheetEntry = {
+  id: string;
+  created_at: string;
+  date: string;
+  hours: number;
+  description: string;
+  category: 'development' | 'design' | 'research' | 'testing' | 'documentation';
+};
+
+export type FeatureRequest = {
+  id: string;
+  created_at: string;
+  title: string;
+  description: string;
+  submitter_name: string | null;
+  submitter_email: string | null;
+  status: 'submitted' | 'under-review' | 'planned' | 'in-progress' | 'completed' | 'declined';
+  github_issue_url: string | null;
+  upvotes: number;
+};
