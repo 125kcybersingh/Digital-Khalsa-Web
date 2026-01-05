@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Digital Khalsa | AI Tools for the Sangat",
@@ -13,10 +14,10 @@ export const metadata: Metadata = {
     siteName: "Digital Khalsa",
     images: [
       {
-        url: "https://digitalkhalsa.com/dk-web-hero-1024x1024-1.png",
-        width: 1024,
-        height: 1024,
-        alt: "Digital Khalsa - GurBani Finder",
+        url: "https://digitalkhalsa.com/dk-og.png",
+        width: 1200,
+        height: 630,
+        alt: "Digital Khalsa - AI Tools for the Sangat",
       },
     ],
     locale: "en_US",
@@ -28,7 +29,7 @@ export const metadata: Metadata = {
     creator: "@125kCyberSingh",
     title: "GurBani Finder - Launching Jan 5",
     description: "I couldn't keep up at Gurdwara. So I built this. If it helps you, that's Guru Ji's kirpa.",
-    images: ["https://digitalkhalsa.com/dk-web-hero-1024x1024-1.png"],
+    images: ["https://digitalkhalsa.com/dk-og.png"],
   },
 };
 
@@ -50,6 +51,7 @@ export default function RootLayout({
         <div className="pt-24 md:pt-28">
           {children}
         </div>
+        <Footer />
       </body>
     </html>
   );

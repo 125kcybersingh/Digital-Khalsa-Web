@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Link from 'next/link';
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -20,93 +21,75 @@ export default function Navigation() {
     setIsMobileMenuOpen(false);
   };
 
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-    setIsMobileMenuOpen(false);
-  };
-
   return (
     <nav
       className={`fixed top-8 md:top-10 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
           ? 'bg-white shadow-md'
-          : 'bg-transparent'
+          : 'bg-white/95 backdrop-blur-sm'
       }`}
     >
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo/Brand */}
-          <button
-            onClick={scrollToTop}
-            className={`text-xl md:text-2xl font-bold transition-colors ${
-              isScrolled ? 'text-[#000080]' : 'text-white'
-            }`}
+          <Link
+            href="/"
+            onClick={handleLinkClick}
+            className="text-xl md:text-2xl font-bold transition-colors text-[#000080]"
           >
             Digital Khalsa
-          </button>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <a
-              href="#"
-              onClick={(e) => {
-                e.preventDefault();
-                scrollToTop();
-              }}
-              className={`font-semibold transition-colors hover:opacity-80 ${
-                isScrolled ? 'text-[#000080]' : 'text-white'
-              }`}
+            <Link
+              href="/"
+              onClick={handleLinkClick}
+              className="font-semibold transition-colors hover:opacity-80 text-[#000080]"
             >
               Home
-            </a>
-            <a
-              href="#features"
+            </Link>
+            <Link
+              href="/features"
               onClick={handleLinkClick}
-              className={`font-semibold transition-colors hover:opacity-80 ${
-                isScrolled ? 'text-[#000080]' : 'text-white'
-              }`}
+              className="font-semibold transition-colors hover:opacity-80 text-[#000080]"
             >
               Features
-            </a>
-            <a
-              href="#features"
+            </Link>
+            <Link
+              href="/about"
               onClick={handleLinkClick}
-              className={`font-semibold transition-colors hover:opacity-80 ${
-                isScrolled ? 'text-[#000080]' : 'text-white'
-              }`}
+              className="font-semibold transition-colors hover:opacity-80 text-[#000080]"
             >
-              Try It Now
-            </a>
-            <a
-              href="#waitlist"
+              About Us
+            </Link>
+            <Link
+              href="/resources"
               onClick={handleLinkClick}
-              className={`px-6 py-2 rounded-lg font-semibold transition-all ${
-                isScrolled
-                  ? 'bg-[#000080] text-white hover:bg-[#000060]'
-                  : 'bg-white text-[#000080] hover:bg-gray-50'
-              }`}
+              className="font-semibold transition-colors hover:opacity-80 text-[#000080]"
+            >
+              Resources
+            </Link>
+            <Link
+              href="/waitlist"
+              onClick={handleLinkClick}
+              className="px-6 py-2 rounded-lg font-semibold transition-all bg-[#000080] text-white hover:bg-[#000060]"
             >
               Waitlist
-            </a>
-            <a
-              href="#waitlist"
+            </Link>
+            <Link
+              href="/waitlist"
               onClick={handleLinkClick}
-              className={`px-6 py-2 rounded-lg font-semibold transition-all ${
-                isScrolled
-                  ? 'bg-[#FF9933] text-white hover:bg-[#FF8800]'
-                  : 'bg-[#FF9933] text-white hover:bg-[#FF8800]'
-              }`}
+              className="px-6 py-2 rounded-lg font-semibold transition-all bg-[#FF9933] text-white hover:bg-[#FF8800]"
             >
               Donate
-            </a>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className={`md:hidden p-2 transition-colors ${
-              isScrolled ? 'text-[#000080]' : 'text-white'
-            }`}
+            className="md:hidden p-2 transition-colors text-[#000080]"
             aria-label="Toggle menu"
           >
             <div className="w-6 h-6 flex flex-col justify-center space-y-1.5">
@@ -135,59 +118,49 @@ export default function Navigation() {
             isMobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
           }`}
         >
-          <div
-            className={`py-4 space-y-4 ${
-              isScrolled ? 'bg-white' : 'bg-[#000080]/95 backdrop-blur-sm'
-            } rounded-b-lg -mx-6 px-6`}
-          >
-            <a
-              href="#"
-              onClick={(e) => {
-                e.preventDefault();
-                scrollToTop();
-              }}
-              className={`block font-semibold transition-colors hover:opacity-80 ${
-                isScrolled ? 'text-[#000080]' : 'text-white'
-              }`}
+          <div className="py-4 space-y-4 bg-white rounded-b-lg -mx-6 px-6">
+            <Link
+              href="/"
+              onClick={handleLinkClick}
+              className="block font-semibold transition-colors hover:opacity-80 text-[#000080]"
             >
               Home
-            </a>
-            <a
-              href="#features"
+            </Link>
+            <Link
+              href="/features"
               onClick={handleLinkClick}
-              className={`block font-semibold transition-colors hover:opacity-80 ${
-                isScrolled ? 'text-[#000080]' : 'text-white'
-              }`}
+              className="block font-semibold transition-colors hover:opacity-80 text-[#000080]"
             >
               Features
-            </a>
-            <a
-              href="#features"
+            </Link>
+            <Link
+              href="/about"
               onClick={handleLinkClick}
-              className={`block font-semibold transition-colors hover:opacity-80 ${
-                isScrolled ? 'text-[#000080]' : 'text-white'
-              }`}
+              className="block font-semibold transition-colors hover:opacity-80 text-[#000080]"
             >
-              Try It Now
-            </a>
-            <a
-              href="#waitlist"
+              About Us
+            </Link>
+            <Link
+              href="/resources"
               onClick={handleLinkClick}
-              className={`block px-6 py-2 rounded-lg font-semibold text-center transition-all ${
-                isScrolled
-                  ? 'bg-[#000080] text-white hover:bg-[#000060]'
-                  : 'bg-white text-[#000080] hover:bg-gray-50'
-              }`}
+              className="block font-semibold transition-colors hover:opacity-80 text-[#000080]"
+            >
+              Resources
+            </Link>
+            <Link
+              href="/waitlist"
+              onClick={handleLinkClick}
+              className="block px-6 py-2 rounded-lg font-semibold text-center transition-all bg-[#000080] text-white hover:bg-[#000060]"
             >
               Waitlist
-            </a>
-            <a
-              href="#waitlist"
+            </Link>
+            <Link
+              href="/waitlist"
               onClick={handleLinkClick}
-              className={`block px-6 py-2 rounded-lg font-semibold text-center transition-all bg-[#FF9933] text-white hover:bg-[#FF8800]`}
+              className="block px-6 py-2 rounded-lg font-semibold text-center transition-all bg-[#FF9933] text-white hover:bg-[#FF8800]"
             >
               Donate
-            </a>
+            </Link>
           </div>
         </div>
       </div>

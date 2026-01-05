@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import Changelog from '@/components/transparency/Changelog';
 import Timesheet from '@/components/transparency/Timesheet';
 import FeatureRequests from '@/components/transparency/FeatureRequests';
@@ -22,12 +23,12 @@ export default function TransparencyPage() {
               <br />
               Here's what's happening with Digital Khalsa.
             </p>
-            <a
+            <Link
               href="/"
               className="inline-block border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-[#000080] transition"
             >
               ← Back to Home
-            </a>
+            </Link>
           </div>
         </div>
       </section>

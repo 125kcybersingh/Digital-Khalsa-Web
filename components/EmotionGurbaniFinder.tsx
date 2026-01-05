@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 import { supabase, type ShabadWithLines, type Line } from '@/lib/supabase';
 
 const emotions = [
@@ -129,12 +130,12 @@ export default function EmotionGurbaniFinder() {
               <br />
               <span className="font-semibold">That's GurBani Finder.</span>
             </p>
-            <a
-              href="#waitlist"
+            <Link
+              href="/waitlist"
               className="inline-block bg-white text-[#000080] px-8 py-4 rounded-lg font-semibold hover:bg-gray-50 transition"
             >
               Join the Waitlist → Launching Jan 5
-            </a>
+            </Link>
           </div>
         </div>
       )}
