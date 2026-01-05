@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import EmotionGurbaniFinder from '@/components/EmotionGurbaniFinder';
 import WaitlistForm from '@/components/WaitlistForm';
 
@@ -180,6 +181,29 @@ export default function HomePage() {
             </p>
           </div>
           <EmotionGurbaniFinder />
+        </div>
+      </section>
+
+      {/* Live Gurdwara Streams Section */}
+      <section className="py-20 bg-gradient-to-br from-[#000080] to-[#FF9933]">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="text-6xl mb-6">🎥</div>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Watch Live Gurdwara Streams
+            </h2>
+            <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+              Connect with the Sangat worldwide. Watch live kirtan, katha, and prayers from gurdwaras around the globe.
+              <br />
+              Anonymous viewing, no account required.
+            </p>
+            <Link
+              href="/streams"
+              className="inline-block bg-white text-[#000080] px-8 py-4 rounded-lg font-semibold hover:bg-gray-50 transition text-center text-lg"
+            >
+              View Live Streams Now
+            </Link>
+          </div>
         </div>
       </section>
 
