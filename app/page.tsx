@@ -127,9 +127,19 @@ export default function HomePage() {
 
       {/* Footer */}
       <footer className="bg-[#000080] text-white py-12">
-        <div className="container mx-auto px-6 text-center">
-          <p className="mb-2">Waheguru Ji Ka Khalsa, Waheguru Ji Ki Fateh 🙏</p>
-          <p className="text-white/60">© 2026 Digital Khalsa. Built with Seva.</p>
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-6">
+            <a
+              href="/transparency"
+              className="inline-block text-white/80 hover:text-white font-semibold transition border-b-2 border-[#FF9933] pb-1"
+            >
+              View Transparency Page →
+            </a>
+          </div>
+          <div className="text-center">
+            <p className="mb-2">Waheguru Ji Ka Khalsa, Waheguru Ji Ki Fateh 🙏</p>
+            <p className="text-white/60">© 2026 Digital Khalsa. Built with Seva.</p>
+          </div>
         </div>
       </footer>
     </main>
