@@ -111,3 +111,89 @@ export type Stream = {
 export type StreamWithGurdwara = Stream & {
   gurdwara: Gurdwara;
 };
+
+// Sikh Vocabulary Types
+export type TermFacet = 'content_type' | 'bani' | 'occasion' | 'location' | 'role' | 'practice' | 'other';
+
+export type Term = {
+  id: string;
+  created_at: string;
+  updated_at: string;
+  gurmukhi: string | null;
+  transliteration: string;
+  english_gloss: string;
+  description: string | null;
+  facet: TermFacet;
+  language: 'punjabi' | 'gurmukhi' | 'english' | 'sanskrit';
+  is_live_stream_relevant: boolean;
+  usage_frequency: number;
+  search_keywords: string[] | null;
+  parent_term_id: string | null;
+};
+
+export type TermAlias = {
+  id: string;
+  term_id: string;
+  alias_text: string;
+  alias_type: 'spelling_variant' | 'common_name' | 'abbreviation' | 'anglicized' | null;
+  created_at: string;
+};
+
+export type TagExample = {
+  id: string;
+  term_id: string;
+  example_phrase: string;
+  context: string | null;
+  created_at: string;
+};
+
+export type StreamTerm = {
+  id: string;
+  stream_id: string;
+  term_id: string;
+  detection_method: 'auto_title' | 'auto_description' | 'manual' | 'ai_detected' | null;
+  confidence_score: number;
+  created_at: string;
+  created_by: string;
+};
+
+export type BaniComposition = {
+  id: string;
+  created_at: string;
+  updated_at: string;
+  name_gurmukhi: string | null;
+  name_transliteration: string;
+  name_english: string;
+  source_granth: 'guru_granth_sahib' | 'dasam_granth' | 'sarbloh_granth' | 'bhai_gurdas_vaaran' | null;
+  author_guru: string | null;
+  ang_start: number | null;
+  ang_end: number | null;
+  is_nitnem: boolean;
+  recitation_time: 'amrit_vela' | 'morning' | 'evening' | 'bedtime' | 'anytime' | null;
+  typical_duration_minutes: number | null;
+  description: string | null;
+  number_of_pauris: number | null;
+  raag: string | null;
+  term_id: string | null;
+  parent_composition_id: string | null;
+  popularity_score: number;
+  search_keywords: string[] | null;
+};
+
+export type TermWithAliases = Term & {
+  aliases: string[] | null;
+};
+
+export type StreamWithTerms = {
+  stream_id: string;
+  stream_title: string | null;
+  gurdwara_id: string;
+  detected_terms: Array<{
+    term_id: string;
+    transliteration: string;
+    english_gloss: string;
+    facet: TermFacet;
+    confidence: number;
+    detection_method: string;
+  }> | null;
+};
