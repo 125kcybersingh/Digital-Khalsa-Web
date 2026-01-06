@@ -16,8 +16,8 @@ Complete this checklist to get your Lindy automation running.
 ### 2. Get Supabase Credentials
 
 - [ ] Go to Supabase Dashboard → Settings → API
-- [ ] Copy **Project URL**: `https://[project-id].supabase.co`
-- [ ] Copy **service_role key** (NOT anon key - Lindy needs write access)
+- [ ] Copy **Project URL**: (https://ngigsghddbqzbbvsmcub.supabase.co)
+- [ ] Copy **service_role key** eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5naWdzZ2hkZGJxemJidnNtY3ViIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc2NzMxNjkxMywiZXhwIjoyMDgyODkyOTEzfQ.MzoMPa6Eh-eHYyOcaDPYP8IfZ_F3EIs77gUmYVQXz0E
 - [ ] Save these securely (you'll use them in Lindy)
 
 ### 3. Get YouTube API Key
@@ -26,7 +26,7 @@ Complete this checklist to get your Lindy automation running.
 - [ ] Create new project (or use existing)
 - [ ] Enable **YouTube Data API v3**
 - [ ] Create credentials → API Key
-- [ ] Copy API key
+- [ ] Copy API key - AIzaSyBNotjeECgbNt37EpraeSCs3Tjz1lfB6oE
 - [ ] (Optional) Restrict key to YouTube Data API for security
 
 ---
