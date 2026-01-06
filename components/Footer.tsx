@@ -25,24 +25,20 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <a 
+                <Link 
                   href="/privacy" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
                   className="hover:text-white transition-colors"
                 >
                   Privacy Policy
-                </a>
+                </Link>
               </li>
               <li>
-                <a 
+                <Link 
                   href="/contact" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
                   className="hover:text-white transition-colors"
                 >
                   Contact
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
