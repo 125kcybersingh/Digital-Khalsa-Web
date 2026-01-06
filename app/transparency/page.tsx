@@ -95,14 +95,6 @@ export default function TransparencyPage() {
           </section>
         </div>
       </div>
-
-      {/* Footer */}
-      <footer className="bg-[#000080] text-white py-12 mt-16">
-        <div className="container mx-auto px-6 text-center">
-          <p className="mb-2">Waheguru Ji Ka Khalsa, Waheguru Ji Ki Fateh 🙏</p>
-          <p className="text-white/60">© 2026 Digital Khalsa. Built with Seva.</p>
-        </div>
-      </footer>
     </main>
   );
 }
