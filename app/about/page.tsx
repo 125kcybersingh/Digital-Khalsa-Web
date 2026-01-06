@@ -1,85 +1,122 @@
+import Link from 'next/link';
+
 export default function AboutPage() {
   return (
     <main className="min-h-screen">
       {/* About 125kCyberSingh Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-6">
-          <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-[#000080] mb-6">
+          <div className="max-w-3xl mx-auto">
+            <h1 className="text-4xl md:text-5xl font-bold text-[#000080] mb-8 text-center">
               Who's 125kCyberSingh?
             </h1>
-            <div className="space-y-4 text-lg text-gray-700 leading-relaxed">
-              <p>
-                I'm not a guide. I'm not a teacher.
-                <br />
-                I'm just someone learning Sikhi, stumbling forward.
-              </p>
-              <p>
-                I built Digital Khalsa because I had a problem:
-                <br />
-                I'd sit at the Gurdwara, hear something beautiful, try to find it... and by then, Kirtan had moved on.
-              </p>
-              <p>
-                This app exists to solve that problem. For me.
-                <br />
-                If it helps you, that's not my doing. That's Guru Ji's kirpa.
-              </p>
-              <p>
-                The avatar removes my ego. This isn't about me. It's about Waheguru's message reaching people who need it—starting with me.
-              </p>
-              
-              {/* Social Follow Icons */}
-              <div className="pt-6 flex items-center justify-center gap-6">
-                <a
-                  href="https://twitter.com/125kCyberSingh"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-[#000080] hover:text-[#FF9933] transition-colors font-semibold"
-                  aria-label="Follow @125kCyberSingh on X (Twitter)"
-                >
-                  <svg
-                    className="w-6 h-6"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                    aria-hidden="true"
-                  >
-                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-                  </svg>
-                  <span>Follow on X</span>
-                </a>
-                <a
-                  href="https://instagram.com/125kcybersingh"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-[#000080] hover:text-[#FF9933] transition-colors font-semibold"
-                  aria-label="Follow @125kcybersingh on Instagram"
-                >
-                  <svg
-                    className="w-6 h-6"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                    aria-hidden="true"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                  <span>Follow on Instagram</span>
-                </a>
+
+            {/* The Name */}
+            <div className="space-y-6 text-lg text-gray-700 leading-relaxed mb-12">
+              <div>
+                <h2 className="text-2xl md:text-3xl font-bold text-[#000080] mb-4">The Name</h2>
+                <p className="mb-4">
+                  At Chamkaur, 40 Singhs faced a Mughal army of over 100,000. As each warrior stepped onto the battlefield, 
+                  roaring "Sat Sri Akal!" before attaining Shaheedi, the Nawab was astonished. He remembered the saying:{' '}
+                  <em>One Singh equals Sava Lakh—125,000.</em>
+                </p>
+                <p className="mb-4">
+                  I am no warrior. I carry no sword. But I believe that in this digital age, with Guru Ji's kirpa and AI as my shastar, 
+                  even someone stumbling through their own Sikhi journey can serve with the strength of many.
+                </p>
+                <p className="font-semibold text-[#000080]">
+                  That's why <strong>125k</strong>. That's why <strong>CyberSingh</strong>.
+                </p>
               </div>
-              
-              <p className="pt-6">
-                <a
-                  href="/transparency"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[#000080] hover:text-[#FF9933] font-semibold transition-colors border-b-2 border-[#FF9933] pb-1"
+
+              <hr className="border-gray-300" />
+
+              {/* The Problem */}
+              <div>
+                <h2 className="text-2xl md:text-3xl font-bold text-[#000080] mb-4">The Problem</h2>
+                <p className="mb-4">
+                  I'd sit at the Gurdwara, hear something beautiful—a shabad that pierced straight through—and try to find it. 
+                  By the time I searched, Kirtan had moved on. The moment was gone.
+                </p>
+                <p>
+                  I've spent decades in cybersecurity, protecting systems and solving complex problems. But this problem—connecting 
+                  with Gurbani in real-time—felt more urgent than any I'd faced professionally.
+                </p>
+              </div>
+
+              <hr className="border-gray-300" />
+
+              {/* The Solution */}
+              <div>
+                <h2 className="text-2xl md:text-3xl font-bold text-[#000080] mb-4">The Solution</h2>
+                <p className="mb-4">
+                  Digital Khalsa exists to solve that problem. For me first. If it helps you, that's not my doing. 
+                  That's Waheguru's kirpa.
+                </p>
+                <p>
+                  The avatar removes my ego from this. This isn't about credentials or accomplishments. This is about Guru Ji's message 
+                  reaching people who need it—starting with the one who needs it most: me.
+                </p>
+              </div>
+
+              <hr className="border-gray-300" />
+
+              {/* The Shastar */}
+              <div>
+                <h2 className="text-2xl md:text-3xl font-bold text-[#000080] mb-4">The Shastar</h2>
+                <p className="mb-4">
+                  The Singhs at Chamkaur were given shastars by Guru Gobind Singh Ji before entering battle. My shastar is different—it's 
+                  artificial intelligence. I may not be physically tough or spiritually advanced. But with this tool in my hands and Guru Ji's 
+                  blessings on my head, I can build something that serves the Sangat.
+                </p>
+                <p className="font-semibold text-[#000080]">
+                  AI doesn't make me special. It makes me <em>able</em>.
+                </p>
+              </div>
+
+              <hr className="border-gray-300" />
+
+              {/* The Mission */}
+              <div>
+                <h2 className="text-2xl md:text-3xl font-bold text-[#000080] mb-4">The Mission</h2>
+                <p className="mb-4">
+                  This isn't a business. This is seva—imperfect, stumbling seva from someone still learning what it means to be a Sikh. 
+                  If Digital Khalsa helps even one person connect more deeply with Gurbani, then the shastar has done its work.
+                </p>
+                <p className="text-xl font-semibold text-[#000080] mb-6">
+                  Waheguru Ji Ka Khalsa. Waheguru Ji Ki Fateh.
+                </p>
+              </div>
+            </div>
+
+            {/* Social Follow Icons */}
+            <div className="pt-6 flex items-center justify-center gap-6 mb-8">
+              <a
+                href="https://twitter.com/125kCyberSingh"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-[#000080] hover:text-[#FF9933] transition-colors font-semibold"
+                aria-label="Follow @125kCyberSingh on X (Twitter)"
+              >
+                <svg
+                  className="w-6 h-6"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
                 >
-                  View Transparency Page →
-                </a>
-              </p>
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                </svg>
+                <span>@125kCyberSingh</span>
+              </a>
+            </div>
+            
+            <div className="text-center pt-6">
+              <Link
+                href="/transparency"
+                className="text-[#000080] hover:text-[#FF9933] font-semibold transition-colors border-b-2 border-[#FF9933] pb-1"
+              >
+                View Transparency Page →
+              </Link>
             </div>
           </div>
         </div>
@@ -87,4 +124,3 @@ export default function AboutPage() {
     </main>
   );
 }
-
